@@ -1,6 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["./src/shared/assets/*"],
+      "@components/*": ["./src/shared/components/*"],
+      "@constants/*": ["./src/shared/constants/*"],
+      "@helpers/*": ["./src/shared/helpers/*"],
+      "@layouts/*": ["./src/shared/layouts/*"],
+      "@pages/*": ["./src/shared/pages/*"],
+      "@routes/*": ["./src/shared/routes/*"],
+      "@schemas/*": ["./src/shared/schemas/*"],
+      "@service/*": ["./src/shared/service/*"],
+      "@store/*": ["./src/shared/store/*"],
+      "@styles/*": ["./src/shared/styles/*"]
+    },
+    "target": "ES6",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
