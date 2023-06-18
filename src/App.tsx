@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <h1>Teste</h1>
+      <h1>{import.meta.env.VITE_REACT_APP_API_LINK}</h1>
     </div>
   );
 }
