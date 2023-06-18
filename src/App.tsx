@@ -1,8 +1,22 @@
+import HomeLayout from '@layouts/HomeLayout';
+import { useEffect } from 'react';
+import { makeServer } from '@config/miragejs/server';
+
 function App() {
+  /* Initializing MirageJS only in development environment. */
+
+  if (import.meta.env.DEV) {
+    makeServer();
+  }
+
+  useEffect(() => {
+    fetch('/v1/projects/');
+  }, []);
+
   return (
-    <div>
-      <h1>{import.meta.env.VITE_REACT_APP_API_LINK}</h1>
-    </div>
+    <>
+      <HomeLayout />
+    </>
   );
 }
 
